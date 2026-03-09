@@ -1,0 +1,54 @@
+Rateio
+
+1 Introdução
+  1.1 Propósito do documento de requisitos
+    Este documento visa especificar os requisitos de software para o sistema de Rateio de despesas. O objetivo é fornecer uma descrição detalhada das funcionalidades, comportamentos e restrições do sistema, servindo como base para a equipe de desenvolvimento e avaliação do professor.
+  
+  1.2 Escopo do produto
+    O software é uma plataforma colaborativa que permite que os usuários registrem gastos em grupo, adicionem contribuintes e calculem automaticamente, ou manualmente, a divisão dos valores. O sistema também gerencia o status de pagamento de cada participante, promovendo tranparência e facilitando a cobrança de dívidas.
+  
+  1.3 Definições, acrônimos e abreviações
+    Despesa: um gasto financeiro registrado no sistema.
+
+    Contribuinte: Usuário envolvido em uma despesa na qual deve pagar parte do valor.
+
+    Criador: Usuário que registrou a Despesa, o credor do valor.
+
+    RF: Requisito Funcional.
+
+    RNF: Requisito Não Funcional.
+  
+  1.4 Referências
+    
+  
+  1.5 Visão geral de restante do documento
+
+  
+2 Descrição Geral
+  2.1 Perspectiva do produto
+    O sistema será uma aplicação independente. Ele atuará como uma ferramenta de gestão financeira em grupo, sem necessidade inicial de integração com sistemas bancários externos (as operações são realizadas a partir da análise do Criador sobre o comprovante que cada Contribuinte anexar). 
+  
+  2.2 Funcionalidades do produto
+    As principais funcionalidades do produto incluem a criação de contas de usuário, a criação de Despesas, o registro dos pagamentos, o cálculo automatizado de divisões (em partes iguais ou personalizadas) e a emissão de relatório de pendências financeiras.
+  
+  2.3 Características do usuário
+    O público-alvo abrange jovens adultos, estudantes, colegas de apartamento, viajantes ou e até mesmo pessoas que simplesmente só saíram juntas. É esperado que os usuários tenham familiaridade básica com aplicativos de smartphones.
+  
+  2.4 Restrições gerais
+    
+  
+  2.5 Suposições e dependências 
+    
+  
+3 Requisitos Específicos 
+  3.1 Requisitos Funcionais (RF)
+
+
+  3.2 Requisitos Não Funcionais
+      
+  
+4 Apêndices 
+
+
+5 Índice
+  
