@@ -5,6 +5,7 @@ Esta pasta contém toda a documentação do projeto **Rateio-ES**.
 ## Estrutura
 
 - `README.md` — Este arquivo de introdução à documentação.
+- `docRequisitos.txt` — Documento de Requisitos.
 
 ## Como contribuir com a documentação
 
