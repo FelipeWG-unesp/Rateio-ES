@@ -29,22 +29,128 @@ Rateio
     O sistema será uma aplicação independente. Ele atuará como uma ferramenta de gestão financeira em grupo, sem necessidade inicial de integração com sistemas bancários externos (as operações são realizadas a partir da análise do Criador sobre o comprovante que cada Contribuinte anexar). 
   
   2.2 Funcionalidades do produto
-    As principais funcionalidades do produto incluem a criação de contas de usuário, a criação de Despesas, o registro dos pagamentos, o cálculo automatizado de divisões (em partes iguais ou personalizadas) e a emissão de relatório de pendências financeiras.
+    O sistema oferecerá funcionalidades para a manutenção de perfis de usuário, organização de grupos de despesas e registro de gastos coletivos. Inclui capacidades para o cálculo de rateio entre participantes e o monitoramento do status de quitação de débitos, permitindo a visualização consolidada de saldos.
   
   2.3 Características do usuário
-    O público-alvo abrange jovens adultos, estudantes, colegas de apartamento, viajantes ou e até mesmo pessoas que simplesmente só saíram juntas. É esperado que os usuários tenham familiaridade básica com aplicativos de smartphones.
+    O público-alvo abrange jovens adultos, estudantes, colegas de apartamento, viajantes ou e até mesmo pessoas que simplesmente só saíram juntas. É esperado que os usuários tenham familiaridade básica com aplicativos de smartphone e compreensão fundamental de conceitos de débito e crédito.".
   
   2.4 Restrições gerais
-    
+    R2.4.1 – O sistema deve ser operado exclusivamente em dispositivos móveis.
+
+    R2.4.2 – O sistema deve estar em conformidade com as diretrizes de interface da plataforma mobile utilizada.
+
+    R2.4.3 – O sistema deve exigir conexão com a internet para a sincronização de dados entre usuários.
+
+    R2.4.4 – O sistema deve ser desenvolvido sem custos de licenciamento de software para a equipe.
+
+    R2.4.5 – O sistema deve suportar apenas a língua portuguesa.
+
+    R2.4.6 – O sistema deve garantir a persistência dos dados em conformidade com a legislação vigente de proteção de dados.
+
   
   2.5 Suposições e dependências 
-    
+    R2.5.1 – O sistema deve pressupor a existência de uma conexão ativa com a internet para a persistência de dados em ambiente de nuvem.
+
+    R2.5.2 – O sistema deve depender da disponibilidade de memória RAM mínima de [X MB] para a execução estável da interface.
+
+    R2.5.3 – O sistema deve assumir que o dispositivo móvel possui o sistema operacional [Android/iOS] em versão superior a [X].
+
+    R2.5.4 – O sistema deve pressupor que o dispositivo dispõe de hardware de captura de imagem para o registro de comprovantes.
+
+    R2.5.5 – O sistema deve depender de serviços de terceiros para o envio de notificações push sobre novas despesas.
+
+    R2.5.6 – O sistema deve assumir que o usuário possui uma conta de e-mail ativa para a realização do cadastro e recuperação de acesso.
+
+    R2.5.7 – O sistema deve pressupor que as configurações de data e hora do dispositivo estejam sincronizadas com a rede para garantir a precisão dos registros financeiros.
+
+    R2.5.8 – O sistema deve depender de serviços de geolocalização ativos caso o usuário opte por registrar o local do gasto.
+  
+
   
 3 Requisitos Específicos 
   3.1 Requisitos Funcionais (RF)
 
+    Módulo de Acesso e Perfil do Usuário
 
-  3.2 Requisitos Não Funcionais
+      [Entrada]
+
+      R3.1.1 – O sistema deve permitir a entrada do nome do usuário para a realização do registro. (E)
+
+      R3.1.2 – O sistema deve permitir a entrada de um endereço de e-mail para identificação única. (E)
+
+      R3.1.3 – O sistema deve permitir a entrada de uma credencial de acesso numérica ou alfanumérica. (E)
+
+      R3.1.4 – O sistema deve permitir a entrada de uma imagem de perfil através da câmera ou galeria do dispositivo. (E)
+
+      [Processamento]
+
+      R3.1.5 – O sistema deve validar se o formato do e-mail inserido respeita o padrão técnico (usuario@dominio.com). (O)
+
+      R3.1.6 – O sistema deve verificar a existência prévia do e-mail na base de dados antes de efetivar o registro. (O)
+
+      R3.1.7 – O sistema deve realizar a cifragem da credencial de acesso antes da sua persistência. (O)
+
+      R3.1.8 – O sistema deve autenticar o usuário através da comparação das credenciais inseridas com os dados persistidos. (O)
+
+      [Saída]
+
+      R3.1.9 – O sistema deve exibir uma mensagem de confirmação após a conclusão do registro de usuário. (E)
+
+      R3.1.10 – O sistema deve apresentar alertas visuais em caso de erro na validação de dados de entrada. (E)
+
+      R3.1.11 – O sistema deve exibir o perfil do usuário com as informações persistidas após a autenticação. (E)
+
+    Módulo de Grupos de Rateio
+
+      [Entrada]
+
+      R3.1.12 – O sistema deve permitir a entrada de um nome para a identificação do grupo de despesas. (E)
+
+      R3.1.13 – O sistema deve permitir a seleção de contatos para envio de convites ao grupo. (E)
+
+      R3.1.14 – O sistema deve permitir a entrada de uma imagem representativa para o grupo. (E)
+
+      [Processamento]
+
+      R3.1.15 – O sistema deve gerar um código de identificação único para cada grupo criado para fins de busca. (O)
+
+      R3.1.16 – O sistema deve vincular o criador do grupo como o administrador do mesmo por padrão. (O)
+
+      [Saída]
+
+      R3.1.17 – O sistema deve exibir a lista de membros vinculados dentro da interface do grupo. (E)
+
+      R3.1.18 – O sistema deve disponibilizar um link de convite para compartilhamento em ferramentas externas. (E)
+
+    Módulo de Registro de Despesas
+
+      [Entrada]
+
+      R3.1.19 – O sistema deve permitir a entrada do valor monetário total do gasto realizado. (E)
+
+      R3.1.20 – O sistema deve permitir a entrada de uma descrição textual para identificar a despesa. (E)
+
+      R3.1.21 – O sistema deve permitir a seleção da data da despesa através de um calendário nativo. (E)
+
+      R3.1.22 – O sistema deve permitir a entrada da imagem do comprovante fiscal utilizando a câmera. (E)
+
+      R3.1.23 – O sistema deve permitir a seleção dos usuários participantes do rateio naquela despesa. (E)
+
+      [Processamento]
+
+      R3.1.24 – O sistema deve calcular a divisão proporcional do valor total com base no número de participantes selecionados. (O)
+
+      R3.1.25 – O sistema deve validar se a soma das parcelas individuais é idêntica ao valor total informado. (O)
+
+      R3.1.26 – O sistema deve persistir a despesa vinculando-a ao grupo e ao usuário credor. (O)
+
+      [Saída]
+
+      R3.1.27 – O sistema deve apresentar um alerta de confirmação após o registro bem-sucedido dos dados. (E)
+
+      R3.1.28 – O sistema deve exibir o saldo individual atualizado de cada participante após a inserção da despesa. (E)
+
+  3.2 Requisitos Não Funcionais (NF)
       
   
 4 Apêndices 
