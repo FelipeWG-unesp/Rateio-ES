@@ -1,6 +1,6 @@
 # Documentação
 
-Esta pasta contém toda a documentação do projeto **Rateio-ES**.
+Esta pasta contém toda a documentação (documentos e diagramas) do projeto **Rateio-ES**.
 
 ## Estrutura
 
